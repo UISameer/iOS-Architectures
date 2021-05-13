@@ -57,7 +57,7 @@ protocol InteractorToPresenterQuotesProtocol: AnyObject {
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterQuotesProtocol: AnyObject {
     
-    static func createModule() -> UINavigationController
+    static func createModule() -> UIViewController
     
     func pushToQuoteDetail(on view: PresenterToViewQuotesProtocol, with quote: Quote)
 }

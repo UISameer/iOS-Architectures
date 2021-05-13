@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		203BC3578BB8F833A7F06450 /* Pods_VIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5474CF998D87699EEC42AC /* Pods_VIPER.framework */; };
+		DC5748FD264D6BA0008CBCC7 /* QuotesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5748FC264D6BA0008CBCC7 /* QuotesRouter.swift */; };
+		DC5748FF264D703F008CBCC7 /* QuotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5748FE264D703F008CBCC7 /* QuotesPresenter.swift */; };
+		DC574901264D704D008CBCC7 /* QuotesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC574900264D704D008CBCC7 /* QuotesInteractor.swift */; };
+		DC574905264D7196008CBCC7 /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC574904264D7196008CBCC7 /* QuoteService.swift */; };
+		DC574908264D71D5008CBCC7 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC574907264D71D5008CBCC7 /* APIManager.swift */; };
+		DC57490A264D71E4008CBCC7 /* APIClients.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC574909264D71E4008CBCC7 /* APIClients.swift */; };
 		DC87A903264CCFD300E77E5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87A902264CCFD300E77E5F /* AppDelegate.swift */; };
 		DC87A907264CCFD300E77E5F /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87A906264CCFD300E77E5F /* QuotesViewController.swift */; };
 		DC87A90A264CCFD300E77E5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC87A908264CCFD300E77E5F /* Main.storyboard */; };
@@ -36,6 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E5474CF998D87699EEC42AC /* Pods_VIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA23679191F64AC4BE59CA1 /* Pods-VIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER.release.xcconfig"; path = "Target Support Files/Pods-VIPER/Pods-VIPER.release.xcconfig"; sourceTree = "<group>"; };
+		4601219F5E88157715BDB8CA /* Pods-VIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER.debug.xcconfig"; path = "Target Support Files/Pods-VIPER/Pods-VIPER.debug.xcconfig"; sourceTree = "<group>"; };
+		DC5748FC264D6BA0008CBCC7 /* QuotesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesRouter.swift; sourceTree = "<group>"; };
+		DC5748FE264D703F008CBCC7 /* QuotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesPresenter.swift; sourceTree = "<group>"; };
+		DC574900264D704D008CBCC7 /* QuotesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesInteractor.swift; sourceTree = "<group>"; };
+		DC574904264D7196008CBCC7 /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
+		DC574907264D71D5008CBCC7 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		DC574909264D71E4008CBCC7 /* APIClients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClients.swift; sourceTree = "<group>"; };
 		DC87A8FF264CCFD300E77E5F /* VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC87A902264CCFD300E77E5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC87A906264CCFD300E77E5F /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				203BC3578BB8F833A7F06450 /* Pods_VIPER.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +95,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6150CCD3850FED1F92B0E733 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E5474CF998D87699EEC42AC /* Pods_VIPER.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC574902264D7185008CBCC7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DC574906264D71CB008CBCC7 /* Managers */,
+				DC574903264D718B008CBCC7 /* Services */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DC574903264D718B008CBCC7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DC574904264D7196008CBCC7 /* QuoteService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DC574906264D71CB008CBCC7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DC574907264D71D5008CBCC7 /* APIManager.swift */,
+				DC574909264D71E4008CBCC7 /* APIClients.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		DC87A8F6264CCFD300E77E5F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +136,8 @@
 				DC87A918264CCFD500E77E5F /* VIPERTests */,
 				DC87A923264CCFD500E77E5F /* VIPERUITests */,
 				DC87A900264CCFD300E77E5F /* Products */,
+				FDE0C0091183CDC321EED712 /* Pods */,
+				6150CCD3850FED1F92B0E733 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,8 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				DC87A932264CD1FE00E77E5F /* Modules */,
-				DC87A902264CCFD300E77E5F /* AppDelegate.swift */,
+				DC574902264D7185008CBCC7 /* Common */,
 				DC87A908264CCFD300E77E5F /* Main.storyboard */,
+				DC87A902264CCFD300E77E5F /* AppDelegate.swift */,
 				DC87A90B264CCFD500E77E5F /* Assets.xcassets */,
 				DC87A90D264CCFD500E77E5F /* LaunchScreen.storyboard */,
 				DC87A910264CCFD500E77E5F /* Info.plist */,
@@ -144,6 +198,9 @@
 				DC87A906264CCFD300E77E5F /* QuotesViewController.swift */,
 				DC87A935264CD2C900E77E5F /* QuotesProtocols.swift */,
 				DC87A937264CD38D00E77E5F /* QuoteEntity.swift */,
+				DC5748FC264D6BA0008CBCC7 /* QuotesRouter.swift */,
+				DC5748FE264D703F008CBCC7 /* QuotesPresenter.swift */,
+				DC574900264D704D008CBCC7 /* QuotesInteractor.swift */,
 			);
 			path = Quotes;
 			sourceTree = "<group>";
@@ -155,6 +212,15 @@
 			path = QuotesDetails;
 			sourceTree = "<group>";
 		};
+		FDE0C0091183CDC321EED712 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4601219F5E88157715BDB8CA /* Pods-VIPER.debug.xcconfig */,
+				3AA23679191F64AC4BE59CA1 /* Pods-VIPER.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC87A929264CCFD500E77E5F /* Build configuration list for PBXNativeTarget "VIPER" */;
 			buildPhases = (
+				82AA4AFCA6C2324B1A6F9CDF /* [CP] Check Pods Manifest.lock */,
 				DC87A8FB264CCFD300E77E5F /* Sources */,
 				DC87A8FC264CCFD300E77E5F /* Frameworks */,
 				DC87A8FD264CCFD300E77E5F /* Resources */,
+				7685F99EDD1D9F08E3F7C47D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +348,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7685F99EDD1D9F08E3F7C47D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPER/Pods-VIPER-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPER/Pods-VIPER-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIPER/Pods-VIPER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82AA4AFCA6C2324B1A6F9CDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPER-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC87A8FB264CCFD300E77E5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -288,7 +398,13 @@
 				DC87A907264CCFD300E77E5F /* QuotesViewController.swift in Sources */,
 				DC87A903264CCFD300E77E5F /* AppDelegate.swift in Sources */,
 				DC87A936264CD2C900E77E5F /* QuotesProtocols.swift in Sources */,
+				DC574908264D71D5008CBCC7 /* APIManager.swift in Sources */,
+				DC574901264D704D008CBCC7 /* QuotesInteractor.swift in Sources */,
+				DC574905264D7196008CBCC7 /* QuoteService.swift in Sources */,
+				DC5748FF264D703F008CBCC7 /* QuotesPresenter.swift in Sources */,
+				DC57490A264D71E4008CBCC7 /* APIClients.swift in Sources */,
 				DC87A938264CD38D00E77E5F /* QuoteEntity.swift in Sources */,
+				DC5748FD264D6BA0008CBCC7 /* QuotesRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +577,7 @@
 		};
 		DC87A92A264CCFD500E77E5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4601219F5E88157715BDB8CA /* Pods-VIPER.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -480,6 +597,7 @@
 		};
 		DC87A92B264CCFD500E77E5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AA23679191F64AC4BE59CA1 /* Pods-VIPER.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
