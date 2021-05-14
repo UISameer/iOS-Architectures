@@ -4,6 +4,8 @@ import PKHUD
 class QuotesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    // MARK: - Properties
+    var presenter: ViewToPresenterQuotesProtocol?
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -16,9 +18,6 @@ class QuotesViewController: UIViewController {
     @objc func refresh() {
         presenter?.refresh()
     }
-
-    // MARK: - Properties
-    var presenter: ViewToPresenterQuotesProtocol?
         
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		203BC3578BB8F833A7F06450 /* Pods_VIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5474CF998D87699EEC42AC /* Pods_VIPER.framework */; };
+		DC4B37EF264E59990050E3A1 /* QuotesDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4B37EE264E59990050E3A1 /* QuotesDetailProtocol.swift */; };
+		DC4B37F1264E5A980050E3A1 /* QuotesDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4B37F0264E5A980050E3A1 /* QuotesDetailPresenter.swift */; };
+		DC4B37F3264E5AAB0050E3A1 /* QuotedDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4B37F2264E5AAB0050E3A1 /* QuotedDetailInteractor.swift */; };
+		DC4B37F5264E5ABA0050E3A1 /* QuotesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4B37F4264E5ABA0050E3A1 /* QuotesDetailViewController.swift */; };
+		DC4B37F7264E5AC90050E3A1 /* QuoteDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4B37F6264E5AC90050E3A1 /* QuoteDetailRouter.swift */; };
+		DC4B37F9264E9E220050E3A1 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4B37F8264E9E220050E3A1 /* ImageService.swift */; };
 		DC5748FD264D6BA0008CBCC7 /* QuotesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5748FC264D6BA0008CBCC7 /* QuotesRouter.swift */; };
 		DC5748FF264D703F008CBCC7 /* QuotesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5748FE264D703F008CBCC7 /* QuotesPresenter.swift */; };
 		DC574901264D704D008CBCC7 /* QuotesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC574900264D704D008CBCC7 /* QuotesInteractor.swift */; };
@@ -46,6 +52,12 @@
 		2E5474CF998D87699EEC42AC /* Pods_VIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA23679191F64AC4BE59CA1 /* Pods-VIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER.release.xcconfig"; path = "Target Support Files/Pods-VIPER/Pods-VIPER.release.xcconfig"; sourceTree = "<group>"; };
 		4601219F5E88157715BDB8CA /* Pods-VIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER.debug.xcconfig"; path = "Target Support Files/Pods-VIPER/Pods-VIPER.debug.xcconfig"; sourceTree = "<group>"; };
+		DC4B37EE264E59990050E3A1 /* QuotesDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesDetailProtocol.swift; sourceTree = "<group>"; };
+		DC4B37F0264E5A980050E3A1 /* QuotesDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesDetailPresenter.swift; sourceTree = "<group>"; };
+		DC4B37F2264E5AAB0050E3A1 /* QuotedDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotedDetailInteractor.swift; sourceTree = "<group>"; };
+		DC4B37F4264E5ABA0050E3A1 /* QuotesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesDetailViewController.swift; sourceTree = "<group>"; };
+		DC4B37F6264E5AC90050E3A1 /* QuoteDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailRouter.swift; sourceTree = "<group>"; };
+		DC4B37F8264E9E220050E3A1 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		DC5748FC264D6BA0008CBCC7 /* QuotesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesRouter.swift; sourceTree = "<group>"; };
 		DC5748FE264D703F008CBCC7 /* QuotesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesPresenter.swift; sourceTree = "<group>"; };
 		DC574900264D704D008CBCC7 /* QuotesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesInteractor.swift; sourceTree = "<group>"; };
@@ -116,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				DC574904264D7196008CBCC7 /* QuoteService.swift */,
+				DC4B37F8264E9E220050E3A1 /* ImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -186,8 +199,8 @@
 		DC87A932264CD1FE00E77E5F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				DC87A934264CD21100E77E5F /* QuotesDetails */,
 				DC87A933264CD20A00E77E5F /* Quotes */,
+				DC87A934264CD21100E77E5F /* QuotesDetails */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -208,6 +221,11 @@
 		DC87A934264CD21100E77E5F /* QuotesDetails */ = {
 			isa = PBXGroup;
 			children = (
+				DC4B37EE264E59990050E3A1 /* QuotesDetailProtocol.swift */,
+				DC4B37F0264E5A980050E3A1 /* QuotesDetailPresenter.swift */,
+				DC4B37F2264E5AAB0050E3A1 /* QuotedDetailInteractor.swift */,
+				DC4B37F4264E5ABA0050E3A1 /* QuotesDetailViewController.swift */,
+				DC4B37F6264E5AC90050E3A1 /* QuoteDetailRouter.swift */,
 			);
 			path = QuotesDetails;
 			sourceTree = "<group>";
@@ -396,13 +414,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC87A907264CCFD300E77E5F /* QuotesViewController.swift in Sources */,
+				DC4B37F9264E9E220050E3A1 /* ImageService.swift in Sources */,
 				DC87A903264CCFD300E77E5F /* AppDelegate.swift in Sources */,
 				DC87A936264CD2C900E77E5F /* QuotesProtocols.swift in Sources */,
 				DC574908264D71D5008CBCC7 /* APIManager.swift in Sources */,
 				DC574901264D704D008CBCC7 /* QuotesInteractor.swift in Sources */,
+				DC4B37F3264E5AAB0050E3A1 /* QuotedDetailInteractor.swift in Sources */,
+				DC4B37EF264E59990050E3A1 /* QuotesDetailProtocol.swift in Sources */,
+				DC4B37F1264E5A980050E3A1 /* QuotesDetailPresenter.swift in Sources */,
+				DC4B37F5264E5ABA0050E3A1 /* QuotesDetailViewController.swift in Sources */,
 				DC574905264D7196008CBCC7 /* QuoteService.swift in Sources */,
 				DC5748FF264D703F008CBCC7 /* QuotesPresenter.swift in Sources */,
 				DC57490A264D71E4008CBCC7 /* APIClients.swift in Sources */,
+				DC4B37F7264E5AC90050E3A1 /* QuoteDetailRouter.swift in Sources */,
 				DC87A938264CD38D00E77E5F /* QuoteEntity.swift in Sources */,
 				DC5748FD264D6BA0008CBCC7 /* QuotesRouter.swift in Sources */,
 			);
