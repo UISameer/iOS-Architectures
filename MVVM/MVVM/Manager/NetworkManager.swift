@@ -3,11 +3,19 @@ import ObjectMapper
 import Alamofire
 import AlamofireObjectMapper
 
-class APIClient {
+class APIManager {
+    static let shared = { APIManager() }()
+    
+    lazy var baseURL: String = {
+        return "https://thesimpsonsquoteapi.glitch.me/"
+    }()
+}
+
+class NetworkManager {
     
     var baseURL: URL?
     
-    static let shared = { APIClient(baseUrl: APIManager.shared.baseURL) }()
+    static let shared = { NetworkManager(baseUrl: APIManager.shared.baseURL) }()
     
     required init(baseUrl: String){
         self.baseURL = URL(string: baseUrl)
@@ -36,9 +44,9 @@ class APIClient {
             .responseArray { (dataResponse: DataResponse<[T]>) in
                 
                 guard let serverResponse = dataResponse.response,
-                      let resultValue = dataResponse.result.value else {
-                    failure(400)
-                    return
+                    let resultValue = dataResponse.result.value else {
+                        failure(400)
+                        return
                 }
                 
                 switch serverResponse.statusCode {
@@ -47,7 +55,8 @@ class APIClient {
                 default:
                     failure(serverResponse.statusCode)
                 }
-            }
+                
+        }
+        
     }
-    
 }
