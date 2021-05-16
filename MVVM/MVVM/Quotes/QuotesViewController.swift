@@ -4,22 +4,25 @@ class QuotesViewController: UIViewController {
     
     @IBOutlet weak var tblView: UITableView!
     
-    var viewModel = QuotesViewModel()
+    var viewModel: QuotesViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        viewModel.reloadTable = { [weak self] in
-            DispatchQueue.main.async {
-                self?.tblView.reloadData()
-            }
-        }
+        getDataFromViewModel()
     }
     
     func setupUI() {
         tblView.delegate = self
         tblView.dataSource = self
         self.navigationItem.title = "Quotes"
+    }
+    
+    func getDataFromViewModel() {
+        self.viewModel = QuotesViewModel()
+        self.viewModel.bindEmployeeViewModelToController = {
+            self.tblView.reloadData()
+        }
     }
 }
 
