@@ -1,2 +1,2 @@
 # iOS-Architectures
-iOS Architectures MVVM, VIPER, MVP 
+iOS Architectures MVVM, VIPER, MVP, VIP
